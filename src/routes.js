@@ -1,16 +1,11 @@
 import React from 'react';
-import {Route, indexRoute} from 'react-router';
+import {Route, IndexRoute} from 'react-router';
+import PostsIndex from './components/posts_index';
 
 import App from './components/app';
 
-const Greeting = () => {
-  return (
-    <div>Hi there...</div>
-  )
-}
-
 export default (
   <Route path="/" component={App}>
-    <Route path="greet" component={Greeting} />
+    <IndexRoute component={PostsIndex}/>
   </Route>
 )

@@ -9,11 +9,15 @@ Routes can be nested like:
   * {this.props.children} in target component
 
 
-![](./blog-overview.png)
-
 
 ![](./route-home.png)
+* A add post button
+* A list of blog posts
+
+create posts_index.js
 
 ![](./route-posts.png)
 
 ![](./route-new.png)
+
+![](./blog-overview.png)
