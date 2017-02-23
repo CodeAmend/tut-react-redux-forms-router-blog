@@ -5,8 +5,12 @@ Routes can be nested like:
     <Route path="greet2" component={Greeting} />
   </Route>
 ```
+
 * In order to see nested routes you must:
   * {this.props.children} in target component
+* IndexRoute to load "/" as with child component.
+  * allows header, footer and other surroundings.
+
 
 
 
