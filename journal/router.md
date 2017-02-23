@@ -9,7 +9,7 @@ Routes can be nested like:
 * In order to see nested routes you must:
   * {this.props.children} in target component
 * IndexRoute to load "/" as with child component.
-  * allows header, footer and other surroundings.
+  * allows header, footer and other surroundings
 
 
 
@@ -18,10 +18,8 @@ Routes can be nested like:
 * A add post button
 * A list of blog posts
 
-create posts_index.js
 
-![](./route-posts.png)
-
-![](./route-new.png)
-
-![](./blog-overview.png)
+created `Lifecycle`
+* componentWillMount()
+  * this runs only one time
+  * it runs just before component is rendered
