@@ -14,3 +14,15 @@
 
 
 We installed redux-forms
+* first we tell reduxForm what it is in charge of
+```
+export default reduxForm({
+  form: 'PostNewForm',
+  fields: ['title', 'categories', 'content']
+})(PostNew);
+```
+
+* we wrap the Component
+* we give the form a name (unique for potential multiple forms)
+* we give it fields
+* next we wite them up
