@@ -11,3 +11,6 @@
 * Add the `form` to the PostNew component
   * when user submits it should call an actionCreator to save blog post
 * create the ActionCreator and update our reducer
+
+
+We installed redux-forms
