@@ -42,3 +42,29 @@ handleSubmit(this.createForm);
   * sends a post request using props from create post.
   * since handleSubmit wraps createForm
     * data is cleaned first.
+
+<br>
+How to navigate after the submit
+
+* push
+  * the onSubmit/handleSubmit() is the prfect place to call
+  * we need to make use of router
+* PropType is imported with Component
+  * `static contextTypes = {}`
+  * we set `router: PropTypes.object`
+
+```
+  static contextTypes = {
+    router: PropTypes.object
+  }
+
+  stepIntoSubmit(props) {
+    console.log(PropTypes);
+    this.props.createPost(props)
+      .then(() => {
+        this.context.router.push('/');
+      });
+  }
+  ```
+
+  

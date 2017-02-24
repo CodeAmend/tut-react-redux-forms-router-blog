@@ -1,10 +1,23 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {reduxForm} from 'redux-form';
 import {createPost} from '../actions/index';
 import {Link} from 'react-router';
 
 class PostNew extends Component {
+
+  static contextTypes = {
+    router: PropTypes.object
+  }
+
+  stepIntoSubmit(props) {
+    console.log(PropTypes);
+    this.props.createPost(props)
+      .then(() => {
+        this.context.router.push('/');
+      });
+  }
+
   render() {
     const {handleSubmit} = this.props;
     const {title, categories, content} = this.props.fields;
@@ -13,15 +26,16 @@ class PostNew extends Component {
       if(name.touched && name.invalid) {
         return 'has-danger';
       }
-      return ''
+      return '';
     }
+
     function hasError(name) {
       return name.touched ? name.error : '';
     }
 
     return (
 
-      <form onSubmit={handleSubmit(this.props.createPost)}>
+      <form onSubmit={handleSubmit(this.stepIntoSubmit.bind(this))}>
         <h3>Create A New Post</h3>
 
         <div className={`form-group ${hasDanger(title)}`}>
