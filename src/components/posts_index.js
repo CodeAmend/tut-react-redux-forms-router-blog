@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchPosts, test} from '../actions/index';
+import {fetchPosts} from '../actions/index';
 import {Link} from 'react-router';
 
 class PostsIndex extends Component {

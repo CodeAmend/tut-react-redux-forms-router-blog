@@ -31,7 +31,14 @@ const {title, categories, content} = this.props.fields;
 console.log(title);
 ```
 handleSubmit a property of props because of 'reduxForm'<br>
-`<form onSubmit={this.handleSubmit}>`
+`<form onSubmit={handleSubmit}>`
 
 'spread' form, categories, and content in the input fields
 `<input type="text" className="form-control" {...categories} />`
+
+handleSubmit(this.createForm);
+
+* created createPost action
+  * sends a post request using props from create post.
+  * since handleSubmit wraps createForm
+    * data is cleaned first.
