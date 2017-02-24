@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchPosts, test} from '../actions/index';
+import {Link} from 'react-router';
 
 class PostsIndex extends Component {
   // Lifecycle called one time just before component is going to be rendered to DOM.
@@ -8,12 +9,15 @@ class PostsIndex extends Component {
     this.props.fetchPosts();
   }
   render() {
-    if (!this.props) {
-      return (<div>Not all </div>);
-    }
-    console.log(this.props);
     return (
-      <div>List of blog posts</div>
+      <div>
+        <div className="text-xs-right">
+          <Link to="/posts/new" className="btn btn-primary">
+            Add Post.
+          </Link>
+        </div>
+        List of blog posts
+      </div>
     );
   }
 };
