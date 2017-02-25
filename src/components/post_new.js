@@ -11,7 +11,6 @@ class PostNew extends Component {
   }
 
   stepIntoSubmit(props) {
-    console.log(PropTypes);
     this.props.createPost(props)
       .then(() => {
         this.context.router.push('/');

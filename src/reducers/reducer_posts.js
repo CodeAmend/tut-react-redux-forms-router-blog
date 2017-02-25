@@ -8,10 +8,11 @@ const INITIAL_STATE = {
 export default function(state = INITIAL_STATE, action) {
   switch (action.type) {
     case FETCH_POSTS:
+      console.log("action.type = FETCH_POSTS so WTF?");
       return {
         ...state,
         all: action.payload.data
-      }
+      };
     default:
       return state;
 
