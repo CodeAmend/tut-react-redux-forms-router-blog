@@ -1,5 +1,5 @@
 ### [react-redux-forms-router-blog]
-https://github.com/CodeAmend/tut-redux-book-list
+https://github.com/CodeAmend/tut-react-redux-forms-router-blog
 
 This shows how Redux can be used to save information to the store.
 
